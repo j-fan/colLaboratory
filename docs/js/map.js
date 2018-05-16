@@ -40,7 +40,7 @@ var users = {
 			dp.classList.add("display-pic")
 			var dp_img = document.createElement("div")
 			dp_img.classList.add("dp-img")
-			dp_img.style.backgroundImage = "url('img/" + users.userList[i].dp + "')"
+			dp_img.style.backgroundImage = "url('../img/" + users.userList[i].dp + "')"
 			var dp_border = document.createElement("div")
 			dp_border.classList.add("dp-border")
 			dp_border.appendChild(dp_img)
@@ -83,7 +83,7 @@ var users = {
 			for(var j=0; j < users.userList[i].gallery.length; j++){
 				var pic = document.createElement("div")
 				pic.classList.add("pic")
-				pic.style.backgroundImage = "url('img/" + users.userList[i].gallery[j] + "')"
+				pic.style.backgroundImage = "url('../img/" + users.userList[i].gallery[j] + "')"
 				gallery.appendChild(pic)
 			}
 			userCard.appendChild(gallery)
@@ -121,7 +121,7 @@ var mapObj = {
 	map : null,
 	init : function(){
 		mapObj.map = new maptalks.Map('map', {
-			center: [-0.113049, 51.498568],
+			center: [151.2081,-33.8713],
 			zoom: 16,
 			//pitch : 50,
 			baseLayer: new maptalks.TileLayer('base', {

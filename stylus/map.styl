@@ -10,6 +10,7 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		margin-left: -154px
 		.pin
 			background-image: url("../img/marker.png")
 			background-repeat: no-repeat
@@ -32,9 +33,9 @@
 			flex-direction: column
 			align-items: center
 			opacity: 0
-
+			pointer-events: none
 			&.visible
-				pointer-events: default
+				pointer-events: initial
 				opacity: 1
 			.display-pic
 				.dp-img
@@ -44,7 +45,7 @@
 					border-radius: 50%
 					border: solid 1px white
 				.dp-border
-					margin-top: 20px 0px
+					margin-top: 20px
 					background: linear-gradient(to bottom,$teal,$orange);
 					padding: 6px
 					border-radius: 50%

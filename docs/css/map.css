@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: -154px;
 }
 #map .marker .pin {
   background-image: url("../img/marker.png");
@@ -32,9 +33,10 @@
   flex-direction: column;
   align-items: center;
   opacity: 0;
+  pointer-events: none;
 }
 #map .marker .user-card.visible {
-  pointer-events: default;
+  pointer-events: initial;
   opacity: 1;
 }
 #map .marker .user-card .display-pic .dp-img {
@@ -45,7 +47,7 @@
   border: solid 1px #fff;
 }
 #map .marker .user-card .display-pic .dp-border {
-  margin-top: 20px 0px;
+  margin-top: 20px;
   background: linear-gradient(to bottom, #088d7b, #e84921);
   padding: 6px;
   border-radius: 50%;
