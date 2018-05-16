@@ -4,3 +4,97 @@
   width: 100vw;
   height: calc(100vh - 60px);
 }
+#map .marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#map .marker .pin {
+  background-image: url("../img/marker.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  cursor: pointer;
+  background-position: center center;
+  margin-top: 4px;
+  z-index: 999;
+}
+#map .marker .user-card {
+  padding: 20px;
+  width: 280px;
+  height: auto;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+#map .marker .user-card.visible {
+  pointer-events: default;
+  opacity: 1;
+}
+#map .marker .user-card .display-pic .dp-img {
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 1px #fff;
+}
+#map .marker .user-card .display-pic .dp-border {
+  margin-top: 20px 0px;
+  background: linear-gradient(to bottom, #088d7b, #e84921);
+  padding: 6px;
+  border-radius: 50%;
+}
+#map .marker .user-card .name {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+}
+#map .marker .user-card .description {
+  text-align: center;
+  padding: 0 20px;
+  width: 200px;
+}
+#map .marker .user-card .buttons {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#map .marker .user-card .buttons > div {
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+}
+#map .marker .user-card .buttons > div:hover {
+  filter: brightness(1.1);
+}
+#map .marker .user-card .buttons > div:active {
+  filter: brightness(1);
+}
+#map .marker .user-card .buttons .chat {
+  background: #e84921;
+}
+#map .marker .user-card .buttons .profile {
+  background: #088d7b;
+}
+#map .marker .user-card .gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+}
+#map .marker .user-card .gallery .pic {
+  border-radius: 2px;
+  width: 89px;
+  height: 89px;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}

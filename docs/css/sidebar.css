@@ -2,7 +2,7 @@
   width: 350px;
   height: calc(100vh - 60px);
   background-color: #e9edee;
-  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
   position: relative;
   z-index: 2;
   transition: left 0.4s ease;
@@ -57,26 +57,8 @@
 #sidebar > div:not(:first-child) {
   padding: 0px 40px;
 }
-#sidebar > div:not(:first-child) h3 {
+#sidebar > div:not(:first-child) h4 {
   color: #088d7b;
-}
-#sidebar .disciplines > div {
-  cursor: pointer;
-  padding: 8px;
-  margin: 2px;
-  border-radius: 2px;
-}
-#sidebar .disciplines > div.selected {
-  background: #e84921;
-  color: #fff;
-}
-#sidebar .disciplines > div:hover {
-  background: rgba(232,73,33,0.878);
-  color: #fff;
-}
-#sidebar .disciplines > div:active {
-  background: #e84921;
-  color: #fff;
 }
 #show-sidebar {
   height: calc(100vh - 60px);
