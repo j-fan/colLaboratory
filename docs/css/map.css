@@ -21,6 +21,7 @@
   z-index: 999;
 }
 #map .marker .user-card {
+  z-index: 998;
   padding: 20px;
   width: 280px;
   height: auto;
@@ -31,7 +32,6 @@
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  pointer-events: none;
 }
 #map .marker .user-card.visible {
   pointer-events: default;
