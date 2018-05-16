@@ -1,0 +1,20 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "del docs\\index.html & nodemon app.js -e js,pug,styl ",
+    "make": "stylus stylus --out docs/css & pug views --out docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.17.1",
+    "pug": "^2.0.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "reload": "^2.2.2",
+    "stylus": "^0.54.5"
+  }
+}
