@@ -1,3 +1,4 @@
-body {
-  color: #f00;
+#map {
+  flex-grow: 1;
+  height: calc(100vh - 60px);
 }

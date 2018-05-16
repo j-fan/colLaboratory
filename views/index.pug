@@ -3,14 +3,14 @@ html
 	head
 		title Home
 		link(rel="stylesheet" type="text/css" href="/css/index.css")
-		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0") 
 
 	body
 		include header.pug
-		include map.pug
-		include sidebar.pug
-
+		#content
+			include sidebar.pug
+			include map.pug
 
 		script(src="page.js")
 		// - add this to enable browser reload on app restart

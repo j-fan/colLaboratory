@@ -1,0 +1,44 @@
+#header {
+  height: 60px;
+  background-color: #088d7b;
+  width: calc(100% - 20px * 2);
+  display: flex;
+  color: #fff;
+  line-height: 60px;
+  padding: 0 20px;
+}
+#header > div {
+  margin: 0px 4px;
+}
+#header .title {
+  font-size: 28px;
+  font-weight: 200;
+}
+#header .menu {
+  flex-grow: 1;
+  flex-direction: row-reverse;
+}
+#header .menu > div {
+  margin: 0px 6px;
+  height: 40px;
+  cursor: pointer;
+}
+#header .menu > div:hover {
+  border-bottom: solid 2px #fff;
+}
+#header .logo {
+  background-image: url("../img/logo_white.png");
+  width: 50px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#header .menu {
+  display: flex;
+}
+@media only screen and (max-width: 450px) {
+  .title {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+#sidebar {
+  width: 350px;
+  height: calc(100vh - 60px);
+  background-color: #e9edee;
+  box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15);
+}
+#sidebar .top-message {
+  height: 140px;
+  background: #fff;
+  padding: 20px 40px;
+  background-image: url("../img/art.jpg");
+  background-size: 600px;
+  color: #fff;
+}
+#sidebar > div:not(:first-child) {
+  padding: 0px 40px;
+}
+#sidebar > div:not(:first-child) h3 {
+  color: #088d7b;
+}
+#sidebar .disciplines > div {
+  cursor: pointer;
+  padding: 8px;
+  margin: 2px;
+  border-radius: 2px;
+}
+#sidebar .disciplines > div.selected {
+  background: #e84921;
+  color: #fff;
+}
+#sidebar .disciplines > div:hover {
+  background: rgba(232,73,33,0.878);
+  color: #fff;
+}
+#sidebar .disciplines > div:active {
+  background: #e84921;
+  color: #fff;
+}
+@media only screen and (max-width: 450px) {
+  #sidebar {
+    width: 100%;
+  }
+}

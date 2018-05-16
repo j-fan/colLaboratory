@@ -1,0 +1,39 @@
+@import "variables.styl"
+
+#sidebar
+	width: 350px
+	height: "calc(100vh - %s)" % $header-height
+	background-color: $light-grey
+	box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15);
+
+	.top-message
+		height: 140px
+		background: white
+		padding: 20px 40px
+		background-image: url("../img/art.jpg")
+		background-size: 600px
+		color: white
+	> div:not(:first-child)
+		padding: 0px 40px
+		h3
+			color: $teal
+			
+	.disciplines
+		> div
+			cursor: pointer
+			padding: 8px
+			margin: 2px
+			border-radius: 2px
+			&.selected
+				background: $orange
+				color: white
+			&:hover
+				background: #e84921e0
+				color: white		
+			&:active
+				background: $orange
+				color: white
+
+@media only screen and (max-width: 450px)
+	#sidebar
+		width: 100%
