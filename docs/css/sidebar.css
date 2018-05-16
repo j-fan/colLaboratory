@@ -2,15 +2,57 @@
   width: 350px;
   height: calc(100vh - 60px);
   background-color: #e9edee;
-  box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+  transition: left 0.4s ease;
+  left: 0;
+}
+#sidebar.hidden {
+  left: -350px;
+}
+#sidebar .highlight {
+  color: #e84921;
 }
 #sidebar .top-message {
-  height: 140px;
+  min-height: 140px;
   background: #fff;
   padding: 20px 40px;
   background-image: url("../img/art.jpg");
   background-size: 600px;
   color: #fff;
+}
+#sidebar .top-message .close-button {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 10px;
+}
+#sidebar .top-message .close-button:before,
+#sidebar .top-message .close-button:after {
+  z-index: 1;
+  position: absolute;
+  width: 2px;
+  left: 50%;
+  background-color: #fff;
+  content: " ";
+  height: 50%;
+}
+#sidebar .top-message .close-button:before {
+  transform: rotate(45deg);
+}
+#sidebar .top-message .close-button:after {
+  transform: rotate(-45deg);
+}
+#sidebar .top-message .close-button:hover:before,
+#sidebar .top-message .close-button:hover:after {
+  opacity: 0.8;
+}
+#sidebar .top-message .close-button:active:before,
+#sidebar .top-message .close-button:active:after {
+  opacity: 1;
 }
 #sidebar > div:not(:first-child) {
   padding: 0px 40px;
@@ -36,8 +78,51 @@
   background: #e84921;
   color: #fff;
 }
+#show-sidebar {
+  height: calc(100vh - 60px);
+  width: 80px;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  cursor: pointer;
+}
+#show-sidebar:hover {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+}
+#show-sidebar .plus-button {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 10px;
+}
+#show-sidebar .plus-button:before,
+#show-sidebar .plus-button:after {
+  z-index: 1;
+  position: absolute;
+  width: 2px;
+  left: 50%;
+  background-color: #e84921;
+  content: " ";
+  height: 50%;
+}
+#show-sidebar .plus-button:before {
+  transform: rotate(90deg);
+}
+#show-sidebar .plus-button:hover:before,
+#show-sidebar .plus-button:hover:after {
+  filter: brightness(0.8);
+}
+#show-sidebar .plus-button:active:before,
+#show-sidebar .plus-button:active:after {
+  opacity: 1;
+}
 @media only screen and (max-width: 450px) {
   #sidebar {
     width: 100%;
+  }
+  #sidebar.hidden {
+    left: -100%;
   }
 }

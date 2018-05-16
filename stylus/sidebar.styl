@@ -1,18 +1,51 @@
 @import "variables.styl"
 
 #sidebar
-	width: 350px
+	width: $sidebar-width
 	height: "calc(100vh - %s)" % $header-height
 	background-color: $light-grey
-	box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15);
-
+	box-shadow: $box-shadow
+	position: relative
+	z-index: 2
+	transition: left 0.4s ease
+	left: 0
+	&.hidden
+		left: $sidebar-width * -1
+	.highlight
+		color: $orange
 	.top-message
-		height: 140px
+		min-height: 140px
 		background: white
 		padding: 20px 40px
 		background-image: url("../img/art.jpg")
 		background-size: 600px
 		color: white
+		.close-button
+			cursor: pointer
+			position: absolute
+			width: 40px
+			height: 40px
+			top: 20px
+			right: 10px
+			&:before, &:after
+				z-index: 1
+				position: absolute
+				width: 2px
+				left: 50%
+				background-color: white
+				content: " "
+				height: 50%
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+			&:hover
+				&:before, &:after
+					opacity: 0.8
+			&:active
+				&:before, &:after
+					opacity: 1
+
 	> div:not(:first-child)
 		padding: 0px 40px
 		h3
@@ -23,7 +56,7 @@
 			cursor: pointer
 			padding: 8px
 			margin: 2px
-			border-radius: 2px
+			border-radius: $border-radius
 			&.selected
 				background: $orange
 				color: white
@@ -33,7 +66,40 @@
 			&:active
 				background: $orange
 				color: white
-
+#show-sidebar
+	height: "calc(100vh - %s)" % $header-height
+	width: 80px
+	z-index: 1
+	position: absolute
+	top: $header-height
+	cursor:pointer
+	&:hover
+		background: linear-gradient(to right, rgba(255,255,255,0.8) , transparent);
+	.plus-button
+		cursor: pointer
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 20px
+		left: 10px
+		&:before, &:after
+			z-index: 1
+			position: absolute
+			width: 2px
+			left: 50%
+			background-color: $orange
+			content: " "
+			height: 50%
+		&:before
+			transform: rotate(90deg)
+		&:hover
+			&:before, &:after
+				filter: brightness(0.8)
+		&:active
+			&:before, &:after
+				opacity: 1	
 @media only screen and (max-width: 450px)
 	#sidebar
 		width: 100%
+		&.hidden
+			left: -100%

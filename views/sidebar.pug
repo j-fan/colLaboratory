@@ -1,11 +1,14 @@
 link(rel="stylesheet" type="text/css" href="/css/sidebar.css")
 #sidebar
 	.top-message
-		h2 We have found 1 potential collaborator that matches your filters
+		h2 We have found #[.highlight 1 potential collaborator] that matches your filters
+		.close-button 
 	.location
 		h3 Location
+		input(type="text")
 	.radius
 		h3 Radius
+		input(type="range")
 	.disciplines
 		h3 Disciplines of Collaborators
 		.discipline.selected Graphic Design
@@ -16,4 +19,7 @@ link(rel="stylesheet" type="text/css" href="/css/sidebar.css")
 		.discipline Performance Art
 		.discipline Sculpture
 		.discipline Ceramics
+#show-sidebar
+	.plus-button
 
+script(src="js/sidebar.js")

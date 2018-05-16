@@ -1,6 +1,7 @@
 @import "variables.styl"
 
 #header
+	user-select: none
 	height: $header-height
 	background-color: $teal
 	width: 'calc(%s - %s * 2)' % (100% $header-padding)
@@ -8,6 +9,9 @@
 	color: white
 	line-height: $header-height
 	padding: 0 $header-padding
+	box-shadow: $box-shadow
+	position: relative
+	z-index: 99
 	> div
 		margin: 0px 4px
 	.title
@@ -21,10 +25,10 @@
 			height: 40px
 			cursor: pointer
 			&:hover
-				border-bottom: solid 2px white
+				border-bottom: solid 1px white
 	.logo
 		background-image: url(../img/logo_white.png)
-		width: 50px
+		width: 36px
 		height: $header-height
 		background-size: contain
 		background-repeat: no-repeat
