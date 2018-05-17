@@ -168,7 +168,7 @@ var mapObj = {
 		mapObj.map = new maptalks.Map('map', {
 			center: [151.1822,-33.8690],
 			zoom: 14,
-			//pitch : 50,
+			pitch : 50,
 			baseLayer: new maptalks.TileLayer('base', {
 				urlTemplate: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
 				subdomains: ['a','b','c','d']
