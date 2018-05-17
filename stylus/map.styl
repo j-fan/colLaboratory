@@ -20,23 +20,27 @@
 			cursor: pointer
 			background-position: center center
 			margin-top: 4px
-			z-index: 999
-		.user-card
 			z-index: 998
+		.user-card
+			position: absolute
+			top: -500px
+			z-index: 999
 			padding: 20px
 			width: 280px
 			height: auto
 			background: white
 			border-radius: $border-radius
 			box-shadow: $box-shadow
-			display: flex
+			//display: flex
 			flex-direction: column
 			align-items: center
 			opacity: 0
 			pointer-events: none
+			display: none
 			&.visible
 				pointer-events: initial
 				opacity: 1
+				display: flex
 			.display-pic
 				.dp-img
 					height: 80px

@@ -11,7 +11,8 @@ var users = {
 									"az4.jpg",
 									"az5.jpg",
 									"az6.jpg"							
-							 ]
+							 ],
+			location: [151.2191,-33.8784]
 		},
 		{
 			name: "Jane Fan",
@@ -24,7 +25,8 @@ var users = {
 									"jf4.jpg",
 									"jf5.jpg",
 									"jf6.jpg"							
-							 ]
+							 ],
+			location: [151.18053,-33.89623]
 		},
 		{
 			name: "Alex Li",
@@ -37,7 +39,8 @@ var users = {
 									"al4.jpg",
 									"al5.jpg",
 									"al6.jpg"							
-							 ]
+							 ],
+			location: [151.20690,-33.87333]
 		},
 		{
 			name: "Steven Christie",
@@ -50,7 +53,8 @@ var users = {
 									"sc4.jpg",
 									"sc5.jpg",
 									"sc6.jpg"							
-							 ]
+							 ],
+			location: [151.20877,-33.88714]
 		},
 		{
 			name: "Jennica Chen",
@@ -63,7 +67,8 @@ var users = {
 									"jc4.jpg",
 									"jc5.jpg",
 									"jc6.jpg"							
-					]
+					],
+			location: [151.21095,-33.87977]
 		}
 
 	],
@@ -161,8 +166,8 @@ var mapObj = {
 	map : null,
 	init : function(){
 		mapObj.map = new maptalks.Map('map', {
-			center: [151.2081,-33.8713],
-			zoom: 16,
+			center: [151.1822,-33.8690],
+			zoom: 14,
 			//pitch : 50,
 			baseLayer: new maptalks.TileLayer('base', {
 				urlTemplate: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
@@ -178,7 +183,7 @@ var mapObj = {
 
 		//create markers
 		for (var i = 0; i < users.userList.length; i++) {
-			var marker = new maptalks.ui.UIMarker([min.x + Math.random() * w, min.y + Math.random() * h],
+			var marker = new maptalks.ui.UIMarker(users.userList[i].location,
 				{
 					'single'        : false,
 					'content'       : '<div class="marker user-' + i + '"></div>'

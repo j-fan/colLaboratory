@@ -19,25 +19,28 @@
   cursor: pointer;
   background-position: center center;
   margin-top: 4px;
-  z-index: 999;
+  z-index: 998;
 }
 #map .marker .user-card {
-  z-index: 998;
+  position: absolute;
+  top: -500px;
+  z-index: 999;
   padding: 20px;
   width: 280px;
   height: auto;
   background: #fff;
   border-radius: 2px;
   box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
-  display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 #map .marker .user-card.visible {
   pointer-events: initial;
   opacity: 1;
+  display: flex;
 }
 #map .marker .user-card .display-pic .dp-img {
   height: 80px;
