@@ -54,7 +54,7 @@ var users = {
 									"sc5.jpg",
 									"sc6.jpg"							
 							 ],
-			location: [151.20877,-33.88714]
+			location: [151.19099,-33.89363]
 		},
 		{
 			name: "Jennica Chen",
@@ -166,7 +166,7 @@ var mapObj = {
 	map : null,
 	init : function(){
 		mapObj.map = new maptalks.Map('map', {
-			center: [151.1822,-33.8690],
+			center: [151.1822,-33.8790],
 			zoom: 14,
 			pitch : 50,
 			baseLayer: new maptalks.TileLayer('base', {
