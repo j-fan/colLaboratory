@@ -25,7 +25,47 @@ var users = {
 									"jf5.jpg",
 									"jf6.jpg"							
 							 ]
+		},
+		{
+			name: "Alex Li",
+			description: "Media artist in Sydney",
+			dp : "al.jpg",
+			gallery: [
+									"al1.jpg",
+									"al2.jpg",
+									"al3.jpg",
+									"al4.jpg",
+									"al5.jpg",
+									"al6.jpg"							
+							 ]
+		},
+		{
+			name: "Steven Christie",
+			description: "Experimental Thespian with a focus on contemporary absurdist physical theatre",
+			dp : "sc.jpg",
+			gallery: [
+									"sc1.jpg",
+									"sc2.jpg",
+									"sc3.jpg",
+									"sc4.jpg",
+									"sc5.jpg",
+									"sc6.jpg"							
+							 ]
+		},
+		{
+			name: "Jennica Chen",
+			description: "Freelance illustrator and filmmaker",
+			dp : "jc.jpg",
+			gallery: [
+									"jc1.jpg",
+									"jc2.jpg",
+									"jc3.jpg",
+									"jc4.jpg",
+									"jc5.jpg",
+									"jc6.jpg"							
+					]
 		}
+
 	],
 	generateUserCards : function(){
 		var markers = document.querySelectorAll("#map .marker")
